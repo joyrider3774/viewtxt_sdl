@@ -46,8 +46,8 @@ jobs:
           GAME_SYS: ${{env.GAME_SYS}}
         run: |
           mkdir -p "metarelease/retrofe files"
-          cp -r "meta/retrofe files" "metarelease/retrofe files"
-          cp ./viewtxt "metarelease/retrofe files/mnt/Text Files/viewtxt"
+          cp -r "meta/retrofe files/." "metarelease/retrofe files/"
+          cp viewtxt "metarelease/retrofe files/mnt/Text Files/viewtxt"
           cp "meta/viewtxt.svg" "metarelease/viewtxt.svg"
           cp "meta/viewtxt.png" "metarelease/viewtxt.png"
           cp "meta/retrofe_installation.txt" "metarelease/retrofe_installation.txt"
