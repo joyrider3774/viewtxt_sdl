@@ -1,4 +1,4 @@
-DEBUG = 1
+DEBUG = 0
 SRC_DIR = src
 OBJ_DIR = ./obj
 EXE=viewtxt
