@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  GAME_NAME: Cglpsdl1
+  GAME_NAME: viewtxt
   GAME_SYS: funkey-s
 
 name: Build funkey-s
@@ -33,10 +33,10 @@ jobs:
           GAME_SYS: ${{env.GAME_SYS}}
         run: |
           mkdir -p opk
-          cp cglpsdl1 opk/cglpsdl1
-          cp meta/cglpsdl1.png opk/cglpsdl1.png
-          cp meta/$GAME_NAME.$GAME_SYS.desktop opk/$GAME_NAME.$GAME_SYS.desktop
-          cp meta/explorer.desktop opk/explorer.desktop
+          cp viewtxt opk/viewtxt
+          cp meta/viewtxt.png opk/viewtxt.png
+          cp meta/viewtxt.funkey-s.desktop opk/viewtxt.funkey-s.desktop
+          cp -r fonts opk/fonts
 
           mksquashfs ./opk $GAME_NAME.opk -all-root -noappend -no-exports -no-xattrs
      
@@ -46,6 +46,7 @@ jobs:
           GAME_SYS: ${{env.GAME_SYS}}
         run: |
           mkdir -p "metarelease/retrofe files"
+          cp ./viewtxt
           cp -r "meta/retrofe files" "metarelease/retrofe files"
           cp "meta/viewtxt.svg" "metarelease/viewtxt.svg"
           cp "meta/viewtxt.png" "metarelease/viewtxt.png"
