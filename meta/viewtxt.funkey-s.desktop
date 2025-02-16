@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=viewtxt
+Comment=view txt text files
+Terminal=false
+Type=Application
+Exec=viewtxt %f
+Icon=viewtxt
+Categories=applications

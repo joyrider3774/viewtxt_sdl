@@ -1,0 +1,5 @@
+1) Enable Write mode for file system can use commandor app for it
+1) Copy all files and folders from `retrofe files` folder to `/` on funkey (on ssh `cp -r "./retrofe files/." /`)
+2) Set execute rights on `viewtxt_launch.sh` in `/usr/games/launchers` (on ssh `chmod +x /usr/games/launchers/viewtxt_launch.sh`)
+3) Add `Text Files` somewhere in `/usr/games/collections/Main/menu.txt` 
+4) reboot funkey

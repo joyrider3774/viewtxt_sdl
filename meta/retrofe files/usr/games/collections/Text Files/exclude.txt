@@ -1,0 +1,6 @@
+DejaVu Fonts License
+DejaVuSansMono-Bold
+DejaVuSansMono-BoldOblique
+DejaVuSansMono-Oblique
+DejaVuSansMono
+viewtxt
