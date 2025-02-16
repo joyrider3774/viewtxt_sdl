@@ -163,7 +163,7 @@ void stop_display_message()
 void display_message(char* message, Uint32 display_time, int x, int y, int padding, SDL_Color fg, SDL_Color bg)
 {
     memset(message_data.message, 0, 1024);
-    strncpy(message_data.message, message, MIN(1023, strlen(message)));
+    snprintf(message_data.message, sizeof(message_data.message), "%s", message);
     message_data.stop_display_time = SDL_GetTicks() + display_time;
     message_data.x = x;
     message_data.y = y;
@@ -975,6 +975,7 @@ void render_text(TextViewer* viewer, SDL_Surface* screen) {
             }
         }
     }
+    SDL_Flip(screen);
 }
 
 // Function to trim whitespace from both ends of a string
