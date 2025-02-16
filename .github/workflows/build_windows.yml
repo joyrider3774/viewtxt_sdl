@@ -48,22 +48,21 @@ jobs:
       - name: Copy dll libraries
         shell: msys2 {0}
         run: |
-          cp /${{matrix.sys}}/bin/libbz*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libdeflate*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libfreetype*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libgcc*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libglib*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libgraphite*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libharfbuzz*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libiconv*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libintl*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libLerc*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/liblzma*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/zlib*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libSDL*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/SDL*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libwinpthread*.dll "./Release/${{matrix.name}}/"
-          cp /${{matrix.sys}}/bin/libsharpyuv*.dll "./Release/${{matrix.name}}/"
+          cp /${{matrix.sys}}/bin/libbz*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libfreetype*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libgcc*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libglib*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libgraphite*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libharfbuzz*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libiconv*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libintl*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libLerc*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/liblzma*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/zlib*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libSDL*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/SDL*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libwinpthread*.dll "./Release/${{matrix.name}}/" || true
+          cp /${{matrix.sys}}/bin/libsharpyuv*.dll "./Release/${{matrix.name}}/" || true
 
       - name: Store build
         uses: actions/upload-artifact@v4
