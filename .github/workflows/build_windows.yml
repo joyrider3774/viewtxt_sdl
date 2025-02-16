@@ -42,7 +42,8 @@ jobs:
           mkdir "./Release/${{matrix.name}}"
           cp "${{matrix.name}}.exe" "./Release/${{matrix.name}}/"
           cp ./README.md "./Release/${{matrix.name}}/"
-          cp ./LICENSE.txt "./Release/${{matrix.name}}/"
+          cp ./LICENSE "./Release/${{matrix.name}}/LICENSE.txt"
+          cp -r fonts "./Release/${{matrix.name}}/fonts"
 
       - name: Copy dll libraries
         shell: msys2 {0}
